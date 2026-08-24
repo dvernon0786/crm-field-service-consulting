@@ -113,12 +113,36 @@
     .faq-q{font-weight:600;margin-bottom:6px;}
     footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:.85rem;color:var(--muted);}
     @media(max-width:600px){h1{font-size:1.3rem;}main{padding:20px 14px 60px;}table{font-size:.78rem;}}
+    .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .site-nav .brand { text-decoration: none; font-weight: 600; color: var(--accent); font-size: 1rem; white-space: nowrap; }
+    .site-nav .links { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .site-nav .links a { color: var(--text); text-decoration: none; font-size: 0.88rem; font-weight: 500; }
+    .site-nav .links a:hover { color: var(--accent); }
+    .site-nav .links a.cta { background: var(--accent); color: #fff; padding: 7px 16px; border-radius: 6px; font-weight: 600; }
+    .site-nav .links a.cta:hover { background: #0a5642; color: #fff; }
+    .bc-row { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+    .bc-row a { color: var(--muted); text-decoration: none; }
+    .bc-row a:hover { text-decoration: underline; }
+    @media (max-width: 700px) {
+      .site-nav .links { gap: 10px 14px; font-size: 0.82rem; }
+    }
 </style>
 </head>
 <body>
 <header>
-  <a href="/">Field Service Consulting</a>
-  <nav class="bc" aria-label="Breadcrumb">
+  <div class="site-nav">
+    <a class="brand" href="/">Field Service Consulting</a>
+    <nav class="links" aria-label="Primary">
+      <a href="/pillar/work-order-management-software">Guide</a>
+      <a href="/pricing/field-service-management-software">Pricing</a>
+      <a href="/platform/">Platforms</a>
+      <a href="/industry/">Industries</a>
+      <a href="/compare/">Compare</a>
+      <a href="/migrate/">Migrate</a>
+      <a class="cta" href="/quote">Get a quote</a>
+    </nav>
+  </div>
+  <nav class="bc-row" aria-label="Breadcrumb">
     <a href="/">Home</a> › <a href="/compare/">Compare</a> › Hyperion vs Sage
   </nav>
 </header>
@@ -193,6 +217,8 @@
     Related: <a href="/pillar/work-order-management-software">Work order management software guide</a> · <a href="/platform/hyperion/">Hyperion overview</a> · <a href="/platform/sage/">Sage overview</a>
   </p>
 </main>
-<footer><p>© 2026 Field Service Consulting · <a href="/privacy">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>
+<footer>
+  <p>© 2026 Field Service Consulting · <a href="/pricing/field-service-management-software">Pricing</a> · <a href="/platform/">Platforms</a> · <a href="/industry/">Industries</a> · <a href="/compare/">Compare</a> · <a href="/migrate/">Migrate</a> · <a href="/privacy">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
 </body>
 </html>

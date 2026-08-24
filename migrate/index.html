@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform migration guides</title>
+  <meta name="description" content="What changes, what breaks, and how to plan the cutover when migrating between ERP and field service platforms.">
+  <link rel="canonical" href="https://crm-field-service-consulting.com/migrate/">
+  <meta property="og:title" content="Platform migration guides">
+  <meta property="og:description" content="What changes, what breaks, and how to plan the cutover when migrating between ERP and field service platforms.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crm-field-service-consulting.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Migrate", "item": "https://crm-field-service-consulting.com/migrate/" }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    :root {
+      --accent: #0F6E56;
+      --accent-light: #E1F5EE;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e0e0e0;
+      --radius: 8px;
+      --max: 960px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', 'DM Sans', system-ui, sans-serif; color: var(--text); line-height: 1.65; background: #fff; }
+    a { color: var(--accent); }
+    header { border-bottom: 1px solid var(--border); padding: 16px 24px; }
+    main { max-width: var(--max); margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+    .lead { color: var(--muted); margin-bottom: 32px; max-width: 640px; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 40px 0 12px; }
+    .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+    .link-grid a { display: block; border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 500; }
+    .link-grid a:hover { border-color: var(--accent); background: var(--accent-light); }
+    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 0.85rem; color: var(--muted); }
+    .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .site-nav .brand { text-decoration: none; font-weight: 600; color: var(--accent); font-size: 1rem; white-space: nowrap; }
+    .site-nav .links { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .site-nav .links a { color: var(--text); text-decoration: none; font-size: 0.88rem; font-weight: 500; }
+    .site-nav .links a:hover { color: var(--accent); }
+    .site-nav .links a.cta { background: var(--accent); color: #fff; padding: 7px 16px; border-radius: 6px; font-weight: 600; }
+    .site-nav .links a.cta:hover { background: #0a5642; color: #fff; }
+    .bc-row { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+    .bc-row a { color: var(--muted); text-decoration: none; }
+    .bc-row a:hover { text-decoration: underline; }
+    @media (max-width: 700px) {
+      .site-nav .links { gap: 10px 14px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="site-nav">
+    <a class="brand" href="/">Field Service Consulting</a>
+    <nav class="links" aria-label="Primary">
+      <a href="/pillar/work-order-management-software">Guide</a>
+      <a href="/pricing/field-service-management-software">Pricing</a>
+      <a href="/platform/">Platforms</a>
+      <a href="/industry/">Industries</a>
+      <a href="/compare/">Compare</a>
+      <a href="/migrate/">Migrate</a>
+      <a class="cta" href="/quote">Get a quote</a>
+    </nav>
+  </div>
+  <nav class="bc-row" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Migrate
+  </nav>
+</header>
+<main>
+  <h1>Platform migration guides</h1>
+  <p class="lead">Moving from one system to another: data, workflow, and cutover planning.</p>
+  <h2>All 86 migration guides</h2>
+  <div class="link-grid">
+    <a href="/migrate/dynamics-to-microsoft">Dynamics 365 to Microsoft</a>
+    <a href="/migrate/dynamics-to-netsuite">Dynamics 365 to NetSuite</a>
+    <a href="/migrate/dynamics-to-odoo">Dynamics 365 to Odoo</a>
+    <a href="/migrate/dynamics-to-oracle">Dynamics 365 to Oracle</a>
+    <a href="/migrate/dynamics-to-sap">Dynamics 365 to SAP</a>
+    <a href="/migrate/dynamics-to-servicenow">Dynamics 365 to ServiceNow</a>
+    <a href="/migrate/netsuite-to-acumatica">NetSuite to Acumatica</a>
+    <a href="/migrate/netsuite-to-dynamics">NetSuite to Dynamics 365</a>
+    <a href="/migrate/netsuite-to-epicor">NetSuite to Epicor</a>
+    <a href="/migrate/netsuite-to-hyperion">NetSuite to Hyperion</a>
+    <a href="/migrate/netsuite-to-ifs">NetSuite to IFS</a>
+    <a href="/migrate/netsuite-to-infor">NetSuite to Infor</a>
+    <a href="/migrate/netsuite-to-microsoft">NetSuite to Microsoft</a>
+    <a href="/migrate/netsuite-to-odoo">NetSuite to Odoo</a>
+    <a href="/migrate/netsuite-to-oracle">NetSuite to Oracle</a>
+    <a href="/migrate/netsuite-to-fusion">NetSuite to Oracle Fusion</a>
+    <a href="/migrate/netsuite-to-peoplesoft">NetSuite to PeopleSoft</a>
+    <a href="/migrate/netsuite-to-sap">NetSuite to SAP</a>
+    <a href="/migrate/netsuite-to-sage">NetSuite to Sage</a>
+    <a href="/migrate/netsuite-to-salesforce">NetSuite to Salesforce</a>
+    <a href="/migrate/netsuite-to-servicenow">NetSuite to ServiceNow</a>
+    <a href="/migrate/netsuite-to-workday">NetSuite to Workday</a>
+    <a href="/migrate/odoo-to-acumatica">Odoo to Acumatica</a>
+    <a href="/migrate/odoo-to-dynamics">Odoo to Dynamics 365</a>
+    <a href="/migrate/odoo-to-epicor">Odoo to Epicor</a>
+    <a href="/migrate/odoo-to-hyperion">Odoo to Hyperion</a>
+    <a href="/migrate/odoo-to-ifs">Odoo to IFS</a>
+    <a href="/migrate/odoo-to-infor">Odoo to Infor</a>
+    <a href="/migrate/odoo-to-microsoft">Odoo to Microsoft</a>
+    <a href="/migrate/odoo-to-netsuite">Odoo to NetSuite</a>
+    <a href="/migrate/odoo-to-oracle">Odoo to Oracle</a>
+    <a href="/migrate/odoo-to-fusion">Odoo to Oracle Fusion</a>
+    <a href="/migrate/odoo-to-peoplesoft">Odoo to PeopleSoft</a>
+    <a href="/migrate/odoo-to-sap">Odoo to SAP</a>
+    <a href="/migrate/odoo-to-sage">Odoo to Sage</a>
+    <a href="/migrate/odoo-to-salesforce">Odoo to Salesforce</a>
+    <a href="/migrate/odoo-to-servicenow">Odoo to ServiceNow</a>
+    <a href="/migrate/odoo-to-workday">Odoo to Workday</a>
+    <a href="/migrate/oracle-to-acumatica">Oracle to Acumatica</a>
+    <a href="/migrate/oracle-to-dynamics">Oracle to Dynamics 365</a>
+    <a href="/migrate/oracle-to-epicor">Oracle to Epicor</a>
+    <a href="/migrate/oracle-to-hyperion">Oracle to Hyperion</a>
+    <a href="/migrate/oracle-to-ifs">Oracle to IFS</a>
+    <a href="/migrate/oracle-to-infor">Oracle to Infor</a>
+    <a href="/migrate/oracle-to-microsoft">Oracle to Microsoft</a>
+    <a href="/migrate/oracle-to-netsuite">Oracle to NetSuite</a>
+    <a href="/migrate/oracle-to-odoo">Oracle to Odoo</a>
+    <a href="/migrate/oracle-to-fusion">Oracle to Oracle Fusion</a>
+    <a href="/migrate/oracle-to-peoplesoft">Oracle to PeopleSoft</a>
+    <a href="/migrate/oracle-to-sap">Oracle to SAP</a>
+    <a href="/migrate/oracle-to-sage">Oracle to Sage</a>
+    <a href="/migrate/oracle-to-salesforce">Oracle to Salesforce</a>
+    <a href="/migrate/oracle-to-servicenow">Oracle to ServiceNow</a>
+    <a href="/migrate/oracle-to-workday">Oracle to Workday</a>
+    <a href="/migrate/sap-to-acumatica">SAP to Acumatica</a>
+    <a href="/migrate/sap-to-dynamics">SAP to Dynamics 365</a>
+    <a href="/migrate/sap-to-epicor">SAP to Epicor</a>
+    <a href="/migrate/sap-to-hyperion">SAP to Hyperion</a>
+    <a href="/migrate/sap-to-ifs">SAP to IFS</a>
+    <a href="/migrate/sap-to-infor">SAP to Infor</a>
+    <a href="/migrate/sap-to-microsoft">SAP to Microsoft</a>
+    <a href="/migrate/sap-to-netsuite">SAP to NetSuite</a>
+    <a href="/migrate/sap-to-odoo">SAP to Odoo</a>
+    <a href="/migrate/sap-to-oracle">SAP to Oracle</a>
+    <a href="/migrate/sap-to-fusion">SAP to Oracle Fusion</a>
+    <a href="/migrate/sap-to-peoplesoft">SAP to PeopleSoft</a>
+    <a href="/migrate/sap-to-sage">SAP to Sage</a>
+    <a href="/migrate/sap-to-salesforce">SAP to Salesforce</a>
+    <a href="/migrate/sap-to-servicenow">SAP to ServiceNow</a>
+    <a href="/migrate/sap-to-workday">SAP to Workday</a>
+    <a href="/migrate/servicenow-to-acumatica">ServiceNow to Acumatica</a>
+    <a href="/migrate/servicenow-to-dynamics">ServiceNow to Dynamics 365</a>
+    <a href="/migrate/servicenow-to-epicor">ServiceNow to Epicor</a>
+    <a href="/migrate/servicenow-to-hyperion">ServiceNow to Hyperion</a>
+    <a href="/migrate/servicenow-to-ifs">ServiceNow to IFS</a>
+    <a href="/migrate/servicenow-to-infor">ServiceNow to Infor</a>
+    <a href="/migrate/servicenow-to-microsoft">ServiceNow to Microsoft</a>
+    <a href="/migrate/servicenow-to-netsuite">ServiceNow to NetSuite</a>
+    <a href="/migrate/servicenow-to-odoo">ServiceNow to Odoo</a>
+    <a href="/migrate/servicenow-to-oracle">ServiceNow to Oracle</a>
+    <a href="/migrate/servicenow-to-fusion">ServiceNow to Oracle Fusion</a>
+    <a href="/migrate/servicenow-to-peoplesoft">ServiceNow to PeopleSoft</a>
+    <a href="/migrate/servicenow-to-sap">ServiceNow to SAP</a>
+    <a href="/migrate/servicenow-to-sage">ServiceNow to Sage</a>
+    <a href="/migrate/servicenow-to-salesforce">ServiceNow to Salesforce</a>
+    <a href="/migrate/servicenow-to-workday">ServiceNow to Workday</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Field Service Consulting · <a href="/pricing/field-service-management-software">Pricing</a> · <a href="/platform/">Platforms</a> · <a href="/industry/">Industries</a> · <a href="/compare/">Compare</a> · <a href="/migrate/">Migrate</a> · <a href="/privacy">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
