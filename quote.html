@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a pricing quote — Field Service Consulting</title>
+  <meta name="description" content="Tell us your team size and current setup. We'll send a realistic cost range for field service software, no obligation.">
+  <link rel="canonical" href="https://crm-field-service-consulting.com/quote">
+  <meta property="og:title" content="Get a pricing quote — Field Service Consulting">
+  <meta property="og:description" content="Tell us your team size and current setup. We'll send a realistic cost range for field service software, no obligation.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="noindex, follow">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crm-field-service-consulting.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Get a quote", "item": "https://crm-field-service-consulting.com/quote" }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    :root {
+      --accent: #0F6E56;
+      --accent-light: #E1F5EE;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e0e0e0;
+      --radius: 8px;
+      --max: 560px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', 'DM Sans', system-ui, sans-serif; color: var(--text); line-height: 1.65; background: #fff; }
+    a { color: var(--accent); }
+    header { border-bottom: 1px solid var(--border); padding: 16px 24px; }
+    header a.brand { text-decoration: none; font-weight: 600; color: var(--accent); font-size: 1rem; }
+    nav { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: var(--max); margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 32px; }
+    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+    .field { margin-bottom: 20px; }
+    input, select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: inherit; }
+    input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; padding: 12px 28px; border: none; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; }
+    .btn:hover { background: #0a5642; }
+    .note { font-size: 0.85rem; color: var(--muted); margin-top: 16px; }
+    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">Field Service Consulting</a>
+  <nav aria-label="Breadcrumb">
+    <a href="/">Home</a> › Get a quote
+  </nav>
+</header>
+
+<main>
+  <h1>Get a pricing quote</h1>
+  <p class="lead">Tell us your team size and what you're running today. We'll reply with a realistic cost range and the questions worth asking before you shortlist a platform.</p>
+
+  <form method="post" action="/api/quote" id="quote-form">
+    <div class="field">
+      <label for="organization">Organization</label>
+      <input type="text" id="organization" name="organization" required autocomplete="organization">
+    </div>
+    <div class="field">
+      <label for="role">Your role</label>
+      <input type="text" id="role" name="role" required autocomplete="organization-title">
+    </div>
+    <div class="field">
+      <label for="team-size">Number of field technicians</label>
+      <select id="team-size" name="team_size" required>
+        <option value="">Select a range</option>
+        <option value="1-20">1–20</option>
+        <option value="21-100">21–100</option>
+        <option value="101-500">101–500</option>
+        <option value="500+">500+</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="current-system">What are you running today, if anything?</label>
+      <input type="text" id="current-system" name="current_system" placeholder="e.g. spreadsheets, Odoo, SAP">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+    </div>
+
+    <div class="honeypot" aria-hidden="true">
+      <label for="company-website">Leave this field blank</label>
+      <input type="text" id="company-website" name="company_website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <input type="hidden" name="source_path" id="source-path" value="">
+    <input type="hidden" name="csrf_token" id="csrf-token" value="">
+
+    <button type="submit" class="btn">Request a quote</button>
+    <p class="note">We reply within two business days. No spam, no vendor calls without your say-so.</p>
+  </form>
+
+  <script>
+    document.getElementById('source-path').value = document.referrer || '';
+  </script>
+</main>
+
+<footer>
+  <p>© 2026 Field Service Consulting · <a href="/privacy">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>

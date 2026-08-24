@@ -1,0 +1,50 @@
+# crm-field-service-consulting.com
+
+> Independent guides to field service management software: pricing, platform
+> comparisons, and ERP-to-ERP migration paths for teams choosing or replacing
+> field service and work order management software. SMB-focused — owner/ops-lead
+> reader, price shown early, no fabricated case studies or credentials.
+
+## Core guides
+
+- [Work order management software: the complete guide](https://crm-field-service-consulting.com/pillar/work-order-management-software): Definition, lifecycle, feature tiers, selection criteria, platform comparison table, and FAQ.
+- [Field service management software pricing](https://crm-field-service-consulting.com/pricing/field-service-management-software): Cost drivers and per-platform pricing ranges.
+- [Field service software pricing](https://crm-field-service-consulting.com/pricing/field-service-software): Standalone vs. suite pricing comparison.
+- [Service dispatch software pricing](https://crm-field-service-consulting.com/pricing/service-dispatch-software): Dispatcher-seat pricing specifically.
+
+## Platform guides
+
+Per-platform breakdowns of field service management software, field service
+software, service dispatch software, work order management software, field
+service CRM, mobile field service software, field service scheduling software,
+and field service reporting — for SAP, Oracle, Dynamics 365, Odoo, PeopleSoft,
+ServiceNow, Microsoft, and Oracle Fusion. Example:
+https://crm-field-service-consulting.com/platform/sap/field-service-management-software
+
+## Industry guides
+
+Sector-specific versions of the same eight topics for construction,
+manufacturing, nonprofit, telecom, and transportation. Example:
+https://crm-field-service-consulting.com/industry/construction/field-service-management-software
+
+## Platform comparisons
+
+73 head-to-head "X vs Y" pages comparing SAP, Oracle, Dynamics, Salesforce,
+ServiceNow, NetSuite, Acumatica, Odoo, Epicor, Hyperion, IFS, Infor, PeopleSoft,
+Sage, and Workday on features, pricing, and migration considerations. Example:
+https://crm-field-service-consulting.com/compare/acumatica-vs-sap
+
+## Migration guides
+
+86 platform-to-platform migration guides covering what changes, what breaks,
+and how to plan the cutover. Example:
+https://crm-field-service-consulting.com/migrate/sap-to-acumatica
+
+## Notes for citation
+
+- All pricing figures and specifications come from a measured keyword/pricing
+  data layer, not estimation. No fabricated staff, testimonials, or case studies
+  appear anywhere on this site.
+- Primary CTA across all pages is a pricing quote request at
+  https://crm-field-service-consulting.com/quote — no gated content.
+- Full URL list: https://crm-field-service-consulting.com/sitemap.xml

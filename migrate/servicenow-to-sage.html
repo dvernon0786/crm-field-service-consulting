@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServiceNow to Sage migration: field service data and workflow</title>
+  <meta name="description" content="What migrating from ServiceNow to Sage actually involves for field service teams. Data mapping, timeline, and the hardest part.">
+  <link rel="canonical" href="https://crm-field-service-consulting.com/migrate/servicenow-to-sage">
+  <meta property="og:title" content="ServiceNow to Sage migration: field service data and workflow">
+  <meta property="og:description" content="What migrating from ServiceNow to Sage actually involves for field service teams. Data mapping, timeline, and the hardest part.">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Evidence: ServiceNow (390/mo) → Sage (20/mo) | Tier C | CTA: pricing-quote -->
+  <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://crm-field-service-consulting.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Migrate",
+        "item": "https://crm-field-service-consulting.com/migrate/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ServiceNow to Sage migration: field service data and workflow",
+        "item": "https://crm-field-service-consulting.com/migrate/servicenow-to-sage"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "ServiceNow to Sage migration: field service data and workflow",
+    "description": "What migrating from ServiceNow to Sage actually involves for field service teams. Data mapping, timeline, and the hardest part.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Data audit and extraction",
+        "text": "Audit ServiceNow data quality. ServiceNow FSM data is relatively accessible via its Table API, but the data model is heavily workflow-driven \u2014 task sta"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Target system configuration",
+        "text": "Configure Sage before data arrives \u2014 work order types, skill definitions, dispatch rules."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Parallel run",
+        "text": "Run ServiceNow and Sage in parallel for 4\u20138 weeks. Dispatch from Sage; reconcile in ServiceNow."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Cutover",
+        "text": "Freeze ServiceNow records. Complete final delta migration. Go live on Sage."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ServiceNow",
+    "applicationCategory": "BusinessApplication"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sage",
+    "applicationCategory": "BusinessApplication"
+  }
+]</script>
+  <style>
+    :root{--accent:#0F6E56;--accent-light:#E1F5EE;--text:#1a1a1a;--muted:#555;--border:#e0e0e0;--radius:8px;--max:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter','DM Sans',system-ui,sans-serif;color:var(--text);line-height:1.65;background:#fff;}
+    a{color:var(--accent);}
+    header{border-bottom:1px solid var(--border);padding:16px 24px;}
+    header a{text-decoration:none;font-weight:600;color:var(--accent);}
+    nav.bc{font-size:.85rem;color:var(--muted);margin-top:4px;}
+    nav.bc a{color:var(--muted);text-decoration:none;}
+    main{max-width:var(--max);margin:0 auto;padding:40px 24px 80px;}
+    h1{font-size:1.75rem;font-weight:700;line-height:1.2;margin-bottom:8px;}
+    .lead{font-size:1rem;color:var(--muted);margin-bottom:28px;}
+    h2{font-size:1.15rem;font-weight:600;margin:32px 0 10px;}
+    p{margin-bottom:14px;}
+    table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:.88rem;}
+    th{text-align:left;background:var(--accent-light);padding:9px 11px;border:1px solid var(--border);font-weight:600;}
+    td{padding:9px 11px;border:1px solid var(--border);vertical-align:top;}
+    tr:nth-child(even) td{background:#fafafa;}
+    ol,ul{padding-left:18px;margin-bottom:14px;}
+    li{margin-bottom:5px;}
+    .warning{background:#fff8e1;border-left:4px solid #f59e0b;padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0;}
+    .cta-box{background:var(--accent-light);border:1px solid var(--accent);border-radius:var(--radius);padding:24px 28px;margin:40px 0 0;}
+    .cta-box h2{margin-top:0;}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:11px 26px;border-radius:var(--radius);text-decoration:none;font-weight:600;margin-top:14px;}
+    .btn:hover{background:#0a5642;}
+    .faq-item{border-top:1px solid var(--border);padding:16px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-q{font-weight:600;margin-bottom:6px;}
+    footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:.85rem;color:var(--muted);}
+    @media(max-width:600px){h1{font-size:1.3rem;}main{padding:20px 14px 60px;}table{font-size:.78rem;}}
+</style>
+</head>
+<body>
+<header>
+  <a href="/">Field Service Consulting</a>
+  <nav class="bc" aria-label="Breadcrumb">
+    <a href="/">Home</a> › <a href="/migrate/">Migrate</a> › ServiceNow to Sage
+  </nav>
+</header>
+<main>
+  <h1>ServiceNow to Sage migration: field service data and workflow</h1>
+  <p class="lead">What moving from ServiceNow to Sage actually involves for field service teams — data mapping, timeline, effort range, and the hardest part.</p>
+
+  <h2>Why teams move from ServiceNow</h2>
+  <p>ServiceNow's thin financial module and lack of native inventory management cause teams to move when they need a full-stack FSM/ERP — ServiceNow excels at workflow but cannot replace a financial ERP.</p>
+
+  <h2>What you're moving to: Sage</h2>
+  <p>Sage X3 / Sage Intacct is a ERP platform from Sage Group plc, best suited for SMB to Mid-market (10–500 employees) organisations in Nonprofit, Manufacturing, Professional Services. Strengths relevant to this migration: Strong financials (Intacct); good for multi-entity non-profits; Sage X3 solid for manufacturing. Known limitations to factor in: Smaller ecosystem; Sage X3 on-premise support declining; limited global reach.</p>
+
+  <h2>The hardest part of this migration</h2>
+  <div class="warning">
+    <strong>Data extraction from ServiceNow:</strong> ServiceNow FSM data is relatively accessible via its Table API, but the data model is heavily workflow-driven — task states, assignment groups, and SLA timers are embedded in records in ways that do not map cleanly to asset-centric FSM platforms.
+  </div>
+  <p>This is the step that consistently takes longer than planned. Budget time for a data audit before any tooling decisions — the quality and structure of your ServiceNow data determines whether the migration runs in months or quarters.</p>
+
+  <h2>What data needs to move</h2>
+  <table>
+    <thead><tr><th scope="col">Data entity</th><th scope="col">Migration complexity</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Work order history</td><td>Medium–High</td><td>Volume and schema complexity vary; closed work orders with all linked records (parts, labour, notes) are the most complex</td></tr>
+      <tr><td>Customer and site records</td><td>Low–Medium</td><td>Usually cleaner than work orders; watch for duplicate records and address format differences</td></tr>
+      <tr><td>Asset and equipment register</td><td>Medium</td><td>Hierarchy structures (parent/child assets) must map to Sage's asset model exactly</td></tr>
+      <tr><td>Technician profiles and skills</td><td>Low</td><td>Skills taxonomy must be rebuilt in Sage before work order assignment logic works correctly</td></tr>
+      <tr><td>Parts and inventory</td><td>Medium</td><td>Part numbers, UoM, and bin locations need mapping; in-flight inventory levels need a cutover count</td></tr>
+      <tr><td>SLA and contract terms</td><td>High</td><td>SLA configuration in Sage must be built before any work orders are dispatched from the new system</td></tr>
+      <tr><td>Open work orders at cutover</td><td>High</td><td>In-flight jobs at cutover date need manual reconciliation — no automated tool handles this reliably</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Migration sequence</h2>
+  <ol>
+    <li><strong>Data audit (weeks 1–3).</strong> Extract a sample of ServiceNow records. Assess completeness, duplicates, and schema gaps. This is where the effort estimate gets refined — everything that follows depends on data quality.</li>
+    <li><strong>Target system configuration (weeks 2–8, parallel).</strong> Configure Sage before any data arrives: work order types, skill definitions, SLA rules, dispatch board layout, and mobile app settings. Data migration into an unconfigured system creates rework.</li>
+    <li><strong>Historical data migration (weeks 6–14).</strong> Migrate closed work orders, customer records, asset register, and technician profiles. Validate record counts and spot-check a sample of complex records.</li>
+    <li><strong>Integration cutover (weeks 10–16).</strong> Connect Sage to your billing system, ERP, and any other adjacent tools. Test the full job lifecycle — intake to invoice — end to end before go-live.</li>
+    <li><strong>Parallel run (4–8 weeks).</strong> Dispatch from Sage. Maintain ServiceNow as a read-only reference. Reconcile daily. This is the phase that teams consistently underestimate — budget the dispatcher time to run both systems simultaneously.</li>
+    <li><strong>Cutover.</strong> Freeze ServiceNow data. Complete delta migration of records created during parallel run. Go live. Retain ServiceNow read-only access for 90 days minimum.</li>
+  </ol>
+
+  <h2>Effort and cost range</h2>
+  <table>
+    <thead><tr><th scope="col">Component</th><th scope="col">Estimate</th></tr></thead>
+    <tbody>
+      <tr><td>Sage implementation (net-new)</td><td>$25,000–$400,000</td></tr>
+      <tr><td>Migration-specific effort (data extraction, mapping, validation)</td><td>60–80% of implementation cost on top</td></tr>
+      <tr><td>Total migration budget range</td><td>$15,000–$320,000</td></tr>
+      <tr><td>Timeline</td><td>3–12 months from kickoff to cutover</td></tr>
+    </tbody>
+  </table>
+  <p>These are ranges, not quotes. The actual number depends on data quality, integration count, and how much ServiceNow has been customised. A data audit in the first 3 weeks will produce a tighter estimate than any figure given before the audit.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">How long does a ServiceNow to Sage migration take?</div>
+    <p>3–12 months from kickoff to cutover, including parallel run. The variable is data complexity and integration count. Clean, well-structured ServiceNow data migrates faster than heavily customised instances with years of accumulated work order history.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is the hardest part of migrating from ServiceNow to Sage?</div>
+    <p>ServiceNow FSM data is relatively accessible via its Table API, but the data model is heavily workflow-driven — task states, assignment groups, and SLA timers are embedded in records in ways that do not map cleanly to asset-centric FSM platforms. Beyond the technical extraction, the hardest operational challenge is the parallel run — running two dispatch systems simultaneously while keeping records reconciled.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can we migrate open work orders from ServiceNow to Sage?</div>
+    <p>In-flight work orders at cutover are the most difficult records to migrate cleanly. Most teams handle these manually: freeze ServiceNow at cutover, complete a snapshot of open orders, and create them fresh in Sage. Automated migration of open work orders with live technician assignments rarely works without significant reconciliation effort.</p>
+  </div>
+
+  <div class="cta-box">
+    <h2>Get a migration estimate</h2>
+    <p>Tell us your ServiceNow instance details — how long it's been running, how many open work orders, and what integrations are in place. We'll give you a realistic effort range before you commit to anything.</p>
+    <a href="/quote" class="btn">Get a quote</a>
+  </div>
+
+  <p style="margin-top:32px;font-size:.88rem;color:var(--muted);">
+    Related: <a href="/pillar/work-order-management-software">Work order management software guide</a> · <a href="/compare/sage-vs-servicenow">ServiceNow vs Sage comparison</a> · <a href="/migrate/sage-to-servicenow">Sage to ServiceNow migration</a>
+  </p>
+</main>
+<footer><p>© 2026 Field Service Consulting · <a href="/privacy">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>
+</body>
+</html>

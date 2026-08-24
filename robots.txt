@@ -1,0 +1,86 @@
+# robots.txt — crm-field-service-consulting.com
+# Generated from shared template. Do not edit per-site — edit the template.
+# Last updated: 2026-08-09
+
+# ── Standard search engines ──────────────────────────────────────────────────
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ── AI search & citation crawlers — MUST remain allowed ──────────────────────
+# Blocking any of these means that platform cannot cite pages on this domain.
+# These are search/citation bots, not training scrapers.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── Training-only scrapers — block (they index but do not cite) ───────────────
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Common Crawl
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+# ── Aggressive scrapers and content thieves ───────────────────────────────────
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ── Global defaults ───────────────────────────────────────────────────────────
+
+User-agent: *
+Allow: /
+
+# Block only non-content paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /static/chunks/
+Disallow: /.well-known/
+
+# ── Sitemap ───────────────────────────────────────────────────────────────────
+
+Sitemap: https://crm-field-service-consulting.com/sitemap.xml
